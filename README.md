@@ -4,7 +4,7 @@
 
 > A simple animated number for React, using [anime](https://github.com/juliangarnier/anime).
 
-> Live demo [here](https://codesandbox.io/s/v68x95mo30)
+> Live demo [here](https://codesandbox.io/s/1z7nw5rnp3)
 
 ![](https://media.giphy.com/media/iMQAMgUSFrh7X2xBCZ/giphy.gif)
 
@@ -45,8 +45,8 @@ export default class App extends Component {
 }
 ```
 
-[View demo here](https://codesandbox.io/s/v68x95mo30)
-[![Edit animated-number-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/v68x95mo30)
+[View demo here](https://codesandbox.io/s/1z7nw5rnp3)
+[![Edit animated-number-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/1z7nw5rnp3)
 
 ## Props
 
