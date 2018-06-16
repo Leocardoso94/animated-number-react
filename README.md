@@ -17,32 +17,32 @@ $ yarn add animated-number-react
 ```
 
 ```jsx
-<template>
-    <animated-number
-    :value="value"
-    :formatValue="formatToPrice"
-    :duration="300"
-    />
-</template>
-<script>
-import AnimatedNumber from "animated-number-vue";
+import AnimatedNumber from "animated-number-react";
 
-export default {
-  components: {
-    AnimatedNumber
-  },
-  data() {
-    return {
-      value: 1000
-    };
-  },
-  methods: {
-    formatToPrice(value) {
-      return `R$ ${value.toFixed(2)}`;
-    }
+export default class App extends Component {
+  state = {
+    value: 150
+  };
+  handleChange = ({ target: { value } }) => {
+    this.setState({ value });
+  };
+  formatValue = value => value.toFixed(2);
+  render() {
+    return (
+      <div>
+        <input
+          type="number"
+          onChange={this.handleChange}
+          value={this.state.value}
+        />
+        <AnimatedNumber
+          value={this.state.value}
+          formatValue={this.formatValue}
+        />
+      </div>
+    );
   }
-};
-</script>
+}
 ```
 
 [View demo here](https://codesandbox.io/s/v68x95mo30)
