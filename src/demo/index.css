@@ -1,0 +1,22 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+}
+
+span {
+  font-size: 50px;
+}
+
+button {
+  border: none;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 100px;
+}
+button:focus {
+  outline: none;
+}

@@ -46,7 +46,7 @@ export default class App extends Component {
 ```
 
 [View demo here](https://codesandbox.io/s/1z7nw5rnp3)
-[![Edit animated-number-vue](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/1z7nw5rnp3)
+[![Edit animated-number-react](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/1z7nw5rnp3)
 
 ## Props
 

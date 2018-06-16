@@ -4,35 +4,48 @@ import AnimatedNumber from '../lib';
 export default class App extends Component {
   state = {
     value: 150,
+    duration: 5000,
   };
-  handleChange = ({ target: { value } }) => {
+  handleChangeValue = ({ target: { value } }) => {
     this.setState({ value });
   };
-  formatValue = value => value.toFixed(2);
+  handleChangeDuration = ({ target: { value } }) => {
+    this.setState({ duration: value });
+  };
+  formatValue = value => `$ ${Number(value).toFixed(2)}`;
   render() {
     return (
       <div>
-        <input type="number" onChange={this.handleChange} value={this.state.value} />
+        <div>
+          <label htmlFor="">Value: </label>
+          <input type="number" onChange={this.handleChangeValue} value={this.state.value} />
+        </div>
+        <div>
+          <label htmlFor="">Duration of animation: </label>
+          <input type="number" onChange={this.handleChangeDuration} value={this.state.duration} />
+        </div>
         <br />
-        <AnimatedNumber value={this.state.value} formatValue={this.formatValue} />
+        <AnimatedNumber
+          value={this.state.value}
+          formatValue={this.formatValue}
+          duration={this.state.duration}
+        />
+        <hr />
+        <button
+          onClick={() => {
+            this.setState({ value: this.state.value + 500 });
+          }}
+        >
+          Increase 500
+        </button>
+        <button
+          onClick={() => {
+            this.setState({ value: this.state.value - 500 });
+          }}
+        >
+          Decrease 500
+        </button>
         <br />
-        <AnimatedNumber value={this.state.value} />
-        <br />
-        <AnimatedNumber value={this.state.value} />
-        <br />
-        <AnimatedNumber value={this.state.value} />
-        <br />
-        <AnimatedNumber value={this.state.value} />
-        <br />
-        <AnimatedNumber value={this.state.value} />
-        <br />
-        <AnimatedNumber value={this.state.value} />
-        <br />
-        <AnimatedNumber value={this.state.value} />
-        <br />
-        <AnimatedNumber value={this.state.value} />
-        <br />
-        <AnimatedNumber value={this.state.value} />
       </div>
     );
   }
