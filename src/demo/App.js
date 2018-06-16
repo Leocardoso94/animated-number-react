@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import AnimatedNumber from "../lib";
+import React, { Component } from 'react';
+import AnimatedNumber from '../lib';
 
 export default class App extends Component {
   state = {
-    value: 150
+    value: 150,
   };
   handleChange = ({ target: { value } }) => {
     this.setState({ value });
@@ -12,16 +12,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <input
-          type="number"
-          onChange={this.handleChange}
-          value={this.state.value}
-        />
+        <input type="number" onChange={this.handleChange} value={this.state.value} />
         <br />
-        <AnimatedNumber
-          value={this.state.value}
-          formatValue={this.formatValue}
-        />
+        <AnimatedNumber value={this.state.value} formatValue={this.formatValue} />
         <br />
         <AnimatedNumber value={this.state.value} />
         <br />

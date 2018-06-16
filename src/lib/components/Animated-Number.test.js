@@ -16,17 +16,6 @@ describe('AnimatedNumber.vue', () => {
     }, durationOfAnimation + 100);
   });
 
-  // it('renders a float value when passed', (done) => {
-  //   const floatValue = 123.12;
-  //   const wrapper = shallow(<AnimatedNumber value={floatValue} />);
-
-  //   setTimeout(() => {
-  //     wrapper.update();
-  //     expect(wrapper.text()).toMatch(floatValue.toString());
-  //     done();
-  //   }, durationOfAnimation + 2000);
-  // });
-
   it('renders the correct value when the duration is equal 100', (done) => {
     const duration = 100;
     const wrapper = shallow(<AnimatedNumber value={value} duration={duration} />);
