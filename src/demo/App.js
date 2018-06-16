@@ -17,12 +17,26 @@ export default class App extends Component {
     return (
       <div>
         <div>
-          <label htmlFor="">Value: </label>
-          <input type="number" onChange={this.handleChangeValue} value={this.state.value} />
+          <label htmlFor="inputValue">
+            Value:
+            <input
+              type="number"
+              id="inputValue"
+              onChange={this.handleChangeValue}
+              value={this.state.value}
+            />
+          </label>
         </div>
         <div>
-          <label htmlFor="">Duration of animation: </label>
-          <input type="number" onChange={this.handleChangeDuration} value={this.state.duration} />
+          <label htmlFor="inputDuration">
+            Duration of animation:
+            <input
+              type="number"
+              id="inputDuration"
+              onChange={this.handleChangeDuration}
+              value={this.state.duration}
+            />
+          </label>
         </div>
         <br />
         <AnimatedNumber
