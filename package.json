@@ -14,7 +14,6 @@
   "repository": "https://github.com/Leocardoso94/animated-number-react",
   "license": "MIT",
   "dependencies": {
-    "animejs": "^2.2.0",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import anime from 'animejs';
+import anime from './anime';
 
 const target = {
   animatedValue: 0,
