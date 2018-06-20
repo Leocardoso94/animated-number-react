@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import AnimatedNumber from './Animated-Number';
 
-describe('AnimatedNumber.vue', () => {
+describe('AnimatedNumber', () => {
   const durationOfAnimation = 1000;
   const value = 1500;
 
