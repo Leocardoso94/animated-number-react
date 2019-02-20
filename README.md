@@ -1,6 +1,6 @@
 # animated-number-react
 
-![npm](https://img.shields.io/npm/dt/animated-number-react.svg) [![Build Status](https://travis-ci.org/Leocardoso94/animated-number-react.svg?branch=master)](https://travis-ci.org/Leocardoso94/animated-number-react) [![](https://data.jsdelivr.com/v1/package/npm/animated-number-react/badge)](https://www.jsdelivr.com/package/npm/animated-number-react) ![](http://img.badgesize.io/leocardoso94/animated-number-react/master/dist/AnimatedNumber.umd.min.js)
+![npm](https://img.shields.io/npm/dt/animated-number-react.svg) [![Build Status](https://travis-ci.org/Leocardoso94/animated-number-react.svg?branch=master)](https://travis-ci.org/Leocardoso94/animated-number-react) [![](https://data.jsdelivr.com/v1/package/npm/animated-number-react/badge)](https://www.jsdelivr.com/package/npm/animated-number-react) ![](https://img.badgesize.io/leocardoso94/animated-number-react/master/dist/AnimatedNumber.umd.min.js)
 
 > A simple animated number for React, using [anime](https://github.com/juliangarnier/anime).
 
