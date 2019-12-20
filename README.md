@@ -54,12 +54,12 @@ Following `props` are used while initialization
 
 > Note : Only `value` is a required prop. Others are optional
 
-| Prop Name             | Type              | Description                                                                                    |
-| --------------------- | ----------------- | ---------------------------------------------------------------------------------------------- |
-| value `(required)`    | [ Number, String] | number that will be animated                                                                   |
-| duration `(optional)` | Number            | the duration of animation                                                                      |
-| delay `(optional)`    | Number            | the delay of animation                                                                         |
-| easing `(optional)`   | String            | you can found all valid values [here](https://github.com/juliangarnier/anime#easing-functions) |
+| Prop Name             | Type              | Description                                                                                    | Default Value |
+|-----------------------|-------------------|------------------------------------------------------------------------------------------------|---------------|
+| value `(required)`    | [ Number, String] | number that will be animated                                                                   |               |
+| duration `(optional)` | Number            | the duration of animation                                                                      | 1000          |
+| delay `(optional)`    | Number            | the delay of animation                                                                         | 0             |
+| easing `(optional)`   | String            | you can found all valid values [here](https://github.com/juliangarnier/anime#easing-functions) | 'linear'      |
 
 #### Callbacks props
 
