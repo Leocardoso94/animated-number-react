@@ -137,4 +137,12 @@ describe('AnimatedNumber', () => {
       done();
     }, 55);
   });
+
+  it('should startFrom 2000', () => {
+    const wrapper = shallow(<AnimatedNumber value={0} startFrom={2000} />);
+
+    wrapper.update();
+
+    expect(wrapper.text()).toBe('2000');
+  });
 });

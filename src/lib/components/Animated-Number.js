@@ -19,6 +19,7 @@ class AnimatedNumber extends Component {
     run: PropTypes.func,
     update: PropTypes.func,
     easing: PropTypes.string,
+    startFrom: PropTypes.number,
   };
 
   static defaultProps = {
@@ -30,6 +31,7 @@ class AnimatedNumber extends Component {
     update: defaultFunction,
     begin: defaultFunction,
     delay: 0,
+    startFrom: 0,
   };
 
   state = {
@@ -37,6 +39,8 @@ class AnimatedNumber extends Component {
   };
 
   componentDidMount = () => {
+    const { startFrom } = this.props;
+    target.animatedValue = startFrom;
     this.animateValue();
   };
 
@@ -45,7 +49,8 @@ class AnimatedNumber extends Component {
   };
 
   updateValue = (anima) => {
-    this.props.update(anima);
+    const { update } = this.props;
+    update(anima);
     const { animatedValue } = target;
     this.setState({ animatedValue });
   };
@@ -69,7 +74,10 @@ class AnimatedNumber extends Component {
   };
 
   render() {
-    return <span>{this.props.formatValue(Number(this.state.animatedValue))}</span>;
+    const { formatValue } = this.props;
+    const { animatedValue } = this.state;
+
+    return <span>{formatValue(Number(animatedValue))}</span>;
   }
 }
 

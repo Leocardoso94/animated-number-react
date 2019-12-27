@@ -43,6 +43,7 @@ export default class App extends Component {
           value={this.state.value}
           formatValue={this.formatValue}
           duration={this.state.duration}
+          startFrom={5000}
         />
         <hr />
         <button
