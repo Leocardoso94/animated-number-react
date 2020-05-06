@@ -21,12 +21,12 @@ import AnimatedNumber from "animated-number-react";
 
 export default class App extends Component {
   state = {
-    value: 150
+    value: 150,
   };
   handleChange = ({ target: { value } }) => {
     this.setState({ value });
   };
-  formatValue = value => value.toFixed(2);
+  formatValue = (value) => value.toFixed(2);
   render() {
     return (
       <div>
@@ -54,12 +54,13 @@ Following `props` are used while initialization
 
 > Note : Only `value` is a required prop. Others are optional
 
-| Prop Name             | Type              | Description                                                                                    | Default Value |
-|-----------------------|-------------------|------------------------------------------------------------------------------------------------|---------------|
-| value `(required)`    | [ Number, String] | number that will be animated                                                                   |               |
-| duration `(optional)` | Number            | the duration of animation                                                                      | 1000          |
-| delay `(optional)`    | Number            | the delay of animation                                                                         | 0             |
-| easing `(optional)`   | String            | you can found all valid values [here](https://github.com/juliangarnier/anime#easing-functions) | 'linear'      |
+| Prop Name              | Type              | Description                                                                                    | Default Value |
+| ---------------------- | ----------------- | ---------------------------------------------------------------------------------------------- | ------------- |
+| value `(required)`     | [ Number, String] | number that will be animated                                                                   |               |
+| duration `(optional)`  | Number            | the duration of animation                                                                      | 1000          |
+| delay `(optional)`     | Number            | the delay of animation                                                                         | 0             |
+| className `(optional)` | String            | an className to add to the span                                                                | null          |
+| easing `(optional)`    | String            | you can found all valid values [here](https://github.com/juliangarnier/anime#easing-functions) | 'linear'      |
 
 #### Callbacks props
 
