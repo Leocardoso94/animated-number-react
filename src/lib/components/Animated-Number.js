@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import anime from './anime';
 
-const target = {
-  animatedValue: 0,
-};
-
 const defaultFunction = () => {};
 
 class AnimatedNumber extends Component {
@@ -34,6 +30,10 @@ class AnimatedNumber extends Component {
     className: null,
   };
 
+  target = {
+    animatedValue: 0,
+  }
+
   state = {
     animatedValue: 0,
   };
@@ -48,7 +48,7 @@ class AnimatedNumber extends Component {
 
   updateValue = (anima) => {
     this.props.update(anima);
-    const { animatedValue } = target;
+    const { animatedValue } = this.target;
     this.setState({ animatedValue });
   };
 
@@ -58,7 +58,7 @@ class AnimatedNumber extends Component {
     } = this.props;
 
     anime({
-      targets: target,
+      targets: this.target,
       animatedValue: value,
       duration,
       update: this.updateValue,
