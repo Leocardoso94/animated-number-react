@@ -1,6 +1,6 @@
 {
   "name": "animated-number-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Super easy way to animate numbers with React",
   "main": "build/index.js",
   "scripts": {
