@@ -30,10 +30,6 @@ class AnimatedNumber extends Component {
     className: null,
   };
 
-  target = {
-    animatedValue: 0,
-  }
-
   state = {
     animatedValue: 0,
   };
@@ -44,6 +40,10 @@ class AnimatedNumber extends Component {
 
   componentDidUpdate = (prevProps) => {
     if (prevProps.value !== this.props.value) this.animateValue();
+  };
+
+  target = {
+    animatedValue: 0,
   };
 
   updateValue = (anima) => {
