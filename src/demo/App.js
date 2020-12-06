@@ -5,6 +5,7 @@ export default class App extends Component {
   state = {
     value: 150,
     duration: 5000,
+    mounted: true,
   };
   handleChangeValue = ({ target: { value } }) => {
     this.setState({ value });
@@ -39,11 +40,14 @@ export default class App extends Component {
           </label>
         </div>
         <br />
-        <AnimatedNumber
-          value={this.state.value}
-          formatValue={this.formatValue}
-          duration={this.state.duration}
-        />
+        {
+          this.state.mounted &&
+          <AnimatedNumber
+            value={this.state.value}
+            formatValue={this.formatValue}
+            duration={this.state.duration}
+          />
+        }
         <hr />
         <button
           onClick={() => {
@@ -58,6 +62,11 @@ export default class App extends Component {
           }}
         >
           Decrease 500
+        </button>
+        <button
+          onClick={() => this.setState(prev => ({ mounted: !prev.mounted }))}
+        >
+          {this.state.mounted ? 'Unmount now!' : 'Mount'}
         </button>
         <br />
       </div>
