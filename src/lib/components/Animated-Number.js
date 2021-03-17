@@ -42,6 +42,10 @@ class AnimatedNumber extends Component {
     if (prevProps.value !== this.props.value) this.animateValue();
   };
 
+  componentWillUnmount = () => {
+    this.stopAnimation();
+  };
+
   target = {
     animatedValue: 0,
   };
@@ -52,12 +56,22 @@ class AnimatedNumber extends Component {
     this.setState({ animatedValue });
   };
 
+  stopAnimation = () => {
+    if (!this.instance) return;
+
+    this.instance.pause();
+    this.instance.reset();
+    delete this.instance;
+  };
+
   animateValue = () => {
+    this.stopAnimation();
+
     const {
       duration, begin, easing, complete, run, delay, value,
     } = this.props;
 
-    anime({
+    this.instance = anime({
       targets: this.target,
       animatedValue: value,
       duration,
